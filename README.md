@@ -46,4 +46,10 @@ $twig->addExtension(
 );
 ```
 
+Within your Twig files, you can now use these functions:
+
+```twig
+{{ ucfirst('the first letter will be capitalised.') }}
+```
+
 For bonus points, set your whitelisted functions in a config file. ;)
