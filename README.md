@@ -20,13 +20,13 @@ composer require sidroberts/twig-whitelisted-functions
 ## Usage
 
 ```php
-use Twig_Loader_Filesystem;
-use Twig_Environment;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 use Sid\TwigWhitelistedFunctions\WhitelistedFunctionsExtension;
 
-$loader = new Twig_Loader_Filesystem("views/");
+$loader = new FilesystemLoader("views/");
 
-$twig = new Twig_Environment($loader);
+$twig = new Environment($loader);
 
 
 
