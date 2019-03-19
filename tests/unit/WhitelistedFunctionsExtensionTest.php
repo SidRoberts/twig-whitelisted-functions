@@ -31,7 +31,7 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
     {
         $loader = new Twig_Loader_Array(
             [
-                "template" => "{{ ucfirst(variable) }}",
+                "template" => "{{ lcfirst(variable) }}",
             ]
         );
 
@@ -42,7 +42,7 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
         $twig->addExtension(
             new WhitelistedFunctionsExtension(
                 [
-                    // "ucfirst",
+                    "ucfirst",
                 ]
             )
         );
@@ -52,7 +52,7 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
         $twig->render(
             "template",
             [
-                "variable" => "the string",
+                "variable" => "THE STRING",
             ]
         );
     }
