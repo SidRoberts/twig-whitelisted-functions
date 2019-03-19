@@ -15,6 +15,8 @@ A down-right lazy way of whitelisting regular PHP functions within Twig.
 composer require sidroberts/twig-whitelisted-functions
 ```
 
+For more information on the available releases, check out the [Changelog](https://github.com/SidRoberts/twig-whitelisted-functions/releases).
+
 
 
 ## Usage
