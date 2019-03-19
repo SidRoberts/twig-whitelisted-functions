@@ -19,11 +19,14 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
 
 
 
-    /**
-     * @expectedException \Twig\Error\SyntaxError
-     */
     public function testUndefinedFunctionThrowsException()
     {
+        $this->expectException(
+            \Twig\Error\SyntaxError::class
+        );
+
+
+
         $loader = new ArrayLoader(
             [
                 "template" => "{{ lcfirst(variable) }}",
