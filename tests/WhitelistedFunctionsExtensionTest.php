@@ -2,8 +2,8 @@
 
 namespace MyTunes\Tests\Unit\Controller;
 
-use Twig_Loader_Array;
-use Twig_Environment;
+use Twig\Loader\ArrayLoader;
+use Twig\Environment;
 
 use Sid\TwigWhitelistedFunctions\WhitelistedFunctionsExtension;
 
@@ -20,17 +20,17 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
 
 
     /**
-     * @expectedException Twig_Error_Syntax
+     * @expectedException \Twig\Error\SyntaxError
      */
     public function testUndefinedFunctionThrowsException()
     {
-        $loader = new Twig_Loader_Array(
+        $loader = new ArrayLoader(
             [
                 "template" => "{{ lcfirst(variable) }}",
             ]
         );
 
-        $twig = new Twig_Environment($loader);
+        $twig = new Environment($loader);
 
 
 
@@ -56,13 +56,13 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
 
     public function testDefinedFunction()
     {
-        $loader = new Twig_Loader_Array(
+        $loader = new ArrayLoader(
             [
                 "template" => "{{ ucfirst(variable) }}",
             ]
         );
 
-        $twig = new Twig_Environment($loader);
+        $twig = new Environment($loader);
 
 
 
