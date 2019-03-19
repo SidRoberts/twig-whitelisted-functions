@@ -19,39 +19,6 @@ For more information on the available releases, check out the [Changelog](https:
 
 
 
-## Usage
+## Documentation
 
-```php
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-use Sid\TwigWhitelistedFunctions\WhitelistedFunctionsExtension;
-
-$loader = new FilesystemLoader("views/");
-
-$twig = new Environment($loader);
-
-
-
-$whitelistedFunctions = [
-    "ucfirst",
-    "lcfirst",
-    "number_format",
-    // ...
-];
-
-
-
-$twig->addExtension(
-    new WhitelistedFunctionsExtension(
-        $whitelistedFunctions
-    )
-);
-```
-
-Within your Twig files, you can now use these functions:
-
-```twig
-{{ ucfirst('the first letter will be capitalised.') }}
-```
-
-For bonus points, set your whitelisted functions in a config file. ;)
+See the [Wiki](https://github.com/SidRoberts/twig-whitelisted-functions/wiki).
