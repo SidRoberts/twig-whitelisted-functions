@@ -17,9 +17,9 @@
 
 
     "support": {
-        "source": "https://github.com/sidroberts/twig-whitelisted-functions",
-        "issues": "https://github.com/sidroberts/twig-whitelisted-functions/issues",
-        "wiki":   "https://github.com/sidroberts/twig-whitelisted-functions/wiki"
+        "source": "https://github.com/SidRoberts/twig-whitelisted-functions",
+        "issues": "https://github.com/SidRoberts/twig-whitelisted-functions/issues",
+        "wiki":   "https://github.com/SidRoberts/twig-whitelisted-functions/wiki"
     },
 
 
