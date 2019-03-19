@@ -9,11 +9,6 @@ use Sid\TwigWhitelistedFunctions\WhitelistedFunctionsExtension;
 
 class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-
     protected function _before()
     {
     }
