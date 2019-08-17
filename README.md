@@ -22,3 +22,10 @@ For more information on the available releases, check out the [Changelog](https:
 ## Documentation
 
 See the [Wiki](https://github.com/SidRoberts/twig-whitelisted-functions/wiki).
+
+
+
+## License
+
+Licensed under the MIT License.
+© [Sid Roberts](https://github.com/SidRoberts)
