@@ -4,8 +4,11 @@ A down-right lazy way of whitelisting regular PHP functions within Twig.
 
 
 
-[![Build Status](https://travis-ci.org/SidRoberts/twig-whitelisted-functions.svg?branch=master)](https://travis-ci.org/SidRoberts/twig-whitelisted-functions)
-[![GitHub tag](https://img.shields.io/github/tag/sidroberts/twig-whitelisted-functions.svg?maxAge=2592000)]()
+[![Build Status](https://img.shields.io/travis/SidRoberts/twig-whitelisted-functions/2.0.x.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/twig-whitelisted-functions)
+[![GitHub release](https://img.shields.io/github/release/SidRoberts/twig-whitelisted-functions.svg?style=for-the-badge)]()
+
+[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/twig-whitelisted-functions.svg?style=for-the-badge)](https://github.com/SidRoberts/twig-whitelisted-functions/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/twig-whitelisted-functions.svg?style=for-the-badge)](https://github.com/SidRoberts/twig-whitelisted-functions/pulls)
 
 
 
