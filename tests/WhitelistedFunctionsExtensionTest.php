@@ -2,10 +2,9 @@
 
 namespace MyTunes\Tests\Unit\Controller;
 
-use Twig\Loader\ArrayLoader;
-use Twig\Environment;
-
 use Sid\TwigWhitelistedFunctions\WhitelistedFunctionsExtension;
+use Twig\Environment;
+use Twig\Loader\ArrayLoader;
 
 class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
 {
