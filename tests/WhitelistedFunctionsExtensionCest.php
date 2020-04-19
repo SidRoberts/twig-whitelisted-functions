@@ -1,31 +1,16 @@
 <?php
 
-namespace MyTunes\Tests\Unit\Controller;
+namespace Tests;
 
 use Sid\TwigWhitelistedFunctions\WhitelistedFunctionsExtension;
 use Twig\Environment;
+use Twig\Error\SyntaxError;
 use Twig\Loader\ArrayLoader;
 
-class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
+class WhitelistedFunctionsExtensionCest
 {
-    protected function _before()
+    public function testUndefinedFunctionThrowsException(UnitTester $I)
     {
-    }
-
-    protected function _after()
-    {
-    }
-
-
-
-    public function testUndefinedFunctionThrowsException()
-    {
-        $this->expectException(
-            \Twig\Error\SyntaxError::class
-        );
-
-
-
         $loader = new ArrayLoader(
             [
                 "template" => "{{ lcfirst(variable) }}",
@@ -46,17 +31,22 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
 
 
 
-        $twig->render(
-            "template",
-            [
-                "variable" => "THE STRING",
-            ]
+        $I->expectException(
+            SyntaxError::class,
+            function () use ($twig) {
+                $twig->render(
+                    "template",
+                    [
+                        "variable" => "THE STRING",
+                    ]
+                );
+            }
         );
     }
 
 
 
-    public function testDefinedFunction()
+    public function testDefinedFunction(UnitTester $I)
     {
         $loader = new ArrayLoader(
             [
@@ -87,7 +77,7 @@ class WhitelistedFunctionsExtensionTest extends \Codeception\TestCase\Test
 
 
 
-        $this->assertEquals(
+        $I->assertEquals(
             "The string",
             $actual
         );
