@@ -31,7 +31,7 @@ class WhitelistedFunctionsExtensionCest
 
 
 
-        $I->expectException(
+        $I->expectThrowable(
             SyntaxError::class,
             function () use ($twig) {
                 $twig->render(
