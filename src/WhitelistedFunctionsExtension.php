@@ -2,10 +2,10 @@
 
 namespace Sid\TwigWhitelistedFunctions;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class WhitelistedFunctionsExtension extends Twig_Extension
+class WhitelistedFunctionsExtension extends AbstractExtension
 {
     /**
      * @var array
@@ -26,7 +26,7 @@ class WhitelistedFunctionsExtension extends Twig_Extension
         $functions = [];
 
         foreach ($this->functionNames as $name) {
-            $functions[] = new Twig_SimpleFunction($name, $name);
+            $functions[] = new TwigFunction($name, $name);
         }
 
         return $functions;
